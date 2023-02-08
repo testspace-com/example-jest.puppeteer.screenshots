@@ -1,0 +1,40 @@
+{
+  "name": "example-jest.puppeteer.screenshots",
+  "version": "1.0.0",
+  "description": "A *Example repo* to show how Jest, Puppeteer, and Testspace can work together capturing screenshots on test failures. The repo demonstrates how to capture `screenshots` of failing tests and attach them to the associated `suite` when publishing test results to Testspace.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testspace-com/example-jest.puppeteer.screenshots.git"
+  },
+  "keywords": [
+    "jest",
+    "puppeteer",
+    "jest-puppeteer",
+    "jest-image-snapshot",
+    "testspace",
+    "examples"
+  ],
+  "author": "Mark Underseth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/testspace-com/example-jest.puppeteer.screenshots/issues"
+  },
+  "homepage": "https://github.com/testspace-com/example-jest.puppeteer.screenshots#readme",
+  "devDependencies": {
+    "jest": "^29.4.2",
+    "jest-image-snapshot": "^6.1.0",
+    "jest-junit": "^15.0.0",
+    "jest-puppeteer": "^7.0.0",
+    "puppeteer": "^19.6.3"
+  },
+  "jest-junit": {
+    "suiteNameTemplate": "{filepath}",
+    "classNameTemplate": "{classname}",
+    "titleTemplate": "{title}",
+    "includeShortConsoleOutput": "true"
+  }
+}

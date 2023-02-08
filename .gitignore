@@ -1,0 +1,5 @@
+node_modules
+junit.xml
+screenshots-list.txt
+screenshots
+tests/__image_snapshots__/__diff_output__
