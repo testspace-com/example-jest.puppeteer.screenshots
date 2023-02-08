@@ -2,11 +2,14 @@
 const PuppeteerEnvironment = require('jest-environment-puppeteer');
 const fs = require('fs');
 
-// Configure
+/*
+ * Configurations
+*/
 const testDir                      = './tests'
+// Used for "jest-image-shapshot"
 const imageSnapshotsDir            = testDir+'/__image_snapshots__';
 const imageSnapshotsDiffOutputDir  = imageSnapshotsDir+'/__diff_output__';
-
+// Use for Testspace client publishing
 const screenshotsDir               = 'screenshots';
 const screenshotsListFile          = './screenshots-list.txt';
 
@@ -31,7 +34,7 @@ class CustomEnvironment extends PuppeteerEnvironment {
                 */
                 if (fs.existsSync(imageSnapshotsDiffOutputDir)) {
                     var files = fs.readdirSync(imageSnapshotsDiffOutputDir);
-                    if (files.length > 0 ){
+                    if (files.length > 0) {
                         // Moving diff image to screenshots folder
                         fs.renameSync(imageSnapshotsDiffOutputDir+"/"+files[0],fileName);
                         fs.appendFileSync( screenshotsListFile, '"['+state.currentlyRunningTest.parent.name+']+'+fileName+'{screenshot diff}"' + "\n");
@@ -42,8 +45,8 @@ class CustomEnvironment extends PuppeteerEnvironment {
                 /*
                    If page active, but no auto-generated "Diff" image, capture current screen
                 */
-                await this.global.page.screenshot({ path: fileName});
-                fs.appendFileSync( screenshotsListFile, '"['+state.currentlyRunningTest.parent.name+']+'+fileName+'{screenshot}"' + "\n");
+                await this.global.page.screenshot({ path: fileName });
+                fs.appendFileSync(screenshotsListFile, '"['+state.currentlyRunningTest.parent.name+']+'+fileName+'{screenshot}"' + "\n");
 
                 break;
          }

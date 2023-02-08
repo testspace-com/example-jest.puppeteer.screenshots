@@ -8,7 +8,7 @@ module.exports = async function globalSetup(globalConfig) {
   await setupPuppeteer(globalConfig)
 
   // Custom global setup
-  fs.rmSync("screenshots", { recursive: true, force: true});
+  fs.rmSync("screenshots", { recursive: true, force: true });
   fs.mkdirSync("screenshots");
   fs.openSync(screenshotsListFile, 'w');
 }
