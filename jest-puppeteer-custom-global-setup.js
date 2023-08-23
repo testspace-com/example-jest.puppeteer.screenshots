@@ -1,5 +1,5 @@
 // jest-custom-global-setup.js
-const { setup: setupPuppeteer } = require('jest-environment-puppeteer')
+const setupPuppeteer = require('jest-environment-puppeteer/setup')
 
 const fs = require('fs');
 const screenshotsListFile = './screenshots-list.txt';
