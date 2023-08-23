@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/testspace-com/example-jest.puppeteer.screenshots#readme",
   "devDependencies": {
-     "jest-image-snapshot": "6.x",
-    "jest-junit": "16.x",
     "jest": "^29.6.2",
+    "jest-image-snapshot": "6.x",
+    "jest-junit": "16.x",
     "jest-puppeteer": "^9.0.0",
     "puppeteer": "^21.0.2"
   },
