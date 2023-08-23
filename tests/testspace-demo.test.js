@@ -28,7 +28,14 @@ describe('Testspace Demo', () => {
 
     test('should match Testspace demo project Specs Listing', async () => {
         await page.goto("https://s2.testspace.com/projects/testspace-com:demo/spaces/main/specs");
-        const screenshot = await page.screenshot();
+        const screenshot = await page.screenshot({
+            clip: {
+                x: 0,
+                y: 0,
+                width: 1150,
+                height: 700
+            }
+        });
         console.log("the Specs listing should match");
         expect(screenshot).toMatchImageSnapshot();
     });

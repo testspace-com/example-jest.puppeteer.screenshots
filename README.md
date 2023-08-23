@@ -97,9 +97,8 @@ npm install --save-dev jest-junit
 
 ```
 "jest-junit": {
-    "suiteNameTemplate": "{filepath}",
-    "classNameTemplate": "{classname}",
-    "titleTemplate": "{title}",
-    "includeShortConsoleOutput": "true"
+    "addFileAttribute": "true",
+    "includeShortConsoleOutput": "true",
+    "reportTestSuiteErrors": "true"
 },
 ```

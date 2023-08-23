@@ -25,16 +25,15 @@
   },
   "homepage": "https://github.com/testspace-com/example-jest.puppeteer.screenshots#readme",
   "devDependencies": {
-    "jest": "^29.4.2",
-    "jest-image-snapshot": "^6.1.0",
-    "jest-junit": "^15.0.0",
-    "jest-puppeteer": "^7.0.0",
-    "puppeteer": "^19.6.3"
+    "jest": "^29.6.2",
+    "jest-image-snapshot": "6.x",
+    "jest-junit": "16.x",
+    "jest-puppeteer": "^9.0.0",
+    "puppeteer": "^21.0.2"
   },
-  "jest-junit": {
-    "suiteNameTemplate": "{filepath}",
-    "classNameTemplate": "{classname}",
-    "titleTemplate": "{title}",
-    "includeShortConsoleOutput": "true"
+   "jest-junit": {
+    "addFileAttribute": "true",
+    "includeShortConsoleOutput": "true",
+    "reportTestSuiteErrors": "true"
   }
 }
